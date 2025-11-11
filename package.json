@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "dev": "cd vite-project && npm run dev",
+    "build": "cd vite-project && npm run build",
+    "preview": "cd vite-project && npm run preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.17",
+    "tailwindcss": "^4.1.17"
+  }
+}
