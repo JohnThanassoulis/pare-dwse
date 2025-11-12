@@ -2,16 +2,37 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import { PageWrapper } from "./components/PageWrapper";
+import { Container } from "./components/Container";
+import { Header } from "./components/Header";
+import { Search } from "./components/Search";
+import { Shortlist } from "./components/Shortlist";
+import { PuppiesList } from "./components/PuppiesList";
+import { NewPuppyForm } from "./components/NewPuppyForm";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <>
-      <div>
-        <h1 className="text-xs">hey</h1>
+    <PageWrapper>
+      <Container>
+        <Header />
+        <Main />
+      </Container>
+    </PageWrapper>
+  );
+}
+
+function Main() {
+  return (
+    <main>
+      <div className="mt-24 grid gap-8 sm:grid-cols-2">
+        <Search />
+        <Shortlist />
       </div>
-    </>
+      <PuppiesList />
+      <NewPuppyForm />
+    </main>
   );
 }
 
