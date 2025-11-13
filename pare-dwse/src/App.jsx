@@ -1,6 +1,3 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import { PageWrapper } from "./components/PageWrapper";
 import { Container } from "./components/Container";
@@ -9,10 +6,9 @@ import { Search } from "./components/Search";
 import { Shortlist } from "./components/Shortlist";
 import { PuppiesList } from "./components/PuppiesList";
 import { NewPuppyForm } from "./components/NewPuppyForm";
+import { puppies } from "./data/puppies.jsx";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <PageWrapper>
       <Container>
@@ -30,7 +26,7 @@ function Main() {
         <Search />
         <Shortlist />
       </div>
-      <PuppiesList />
+      <PuppiesList puppies={puppies} />
       <NewPuppyForm />
     </main>
   );
